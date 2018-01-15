@@ -2,6 +2,9 @@ package com.winter.mapper;
 
 import com.winter.model.Project;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * ProjectMapper类
@@ -16,4 +19,11 @@ public interface ProjectMapper {
      * @return
      */
     int addProjectSelective(Project project);
+
+    /**
+     * 获取Project
+     * @param batchNum
+     * @return
+     */
+    List<Project> getProjectsByBatchNum(@Param("batchNum") String batchNum);
 }

@@ -28,4 +28,12 @@ public class ProjectController {
         projectService.readMmpFileToDB(file);
         return ResponseEntity.ok("导入成功!!");
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/project-file", method = RequestMethod.POST)
+    public ResponseEntity writeProjectFile(String batchNum){
+        File file = new File("C:\\Users\\donghua.chen\\Desktop\\开办新公司 - 导出模板.mpp");
+        projectService.writeMppFileToDB("C:\\Users\\donghua.chen\\Desktop",batchNum,file);
+        return ResponseEntity.ok("导出成功");
+    }
 }

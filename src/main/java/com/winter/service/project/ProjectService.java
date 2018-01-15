@@ -40,4 +40,16 @@ public interface ProjectService {
      * @param levelNum
      */
     void getResourceAssignment(Task task, Project project, List<Project> proList, int levelNum);
+    /**
+     * 从数据库读取数据写入xml中
+     * @Author: Donghua.Chen
+     * @Description:
+     * @Date: 2018/1/12
+     * @param fileLocation
+     * @param batchNum
+     * @param file
+     */
+    void writeMppFileToDB(String fileLocation, String batchNum, File file);
+
+
 }
