@@ -24,7 +24,7 @@ public class ProjectController {
     @RequestMapping(value = "/add/project-file", method = RequestMethod.POST)
     public ResponseEntity addProjectFile(){
 
-        File file = new File("C:\\Users\\donghua.chen\\Desktop\\开办新公司.mpp");
+        File file = new File("C:\\Users\\donghua.chen\\Desktop\\项目计划导入模板-2018011201 - 副本.mpp");
         projectService.readMmpFileToDB(file);
         return ResponseEntity.ok("导入成功!!");
     }
