@@ -59,10 +59,12 @@ public class ProjectServiceImpl implements ProjectService {
         }
     }
 
+
+
     @Override
     public void getChildrenTask(Task task, Project project, List<Project> list, int levelNum){
         if(task.getResourceAssignments().size() == 0){
-            levelNum ++;//批次号需要增加
+            levelNum ++;//层级号需要增加
             List<Task> tasks = task.getChildTasks();
             for (int i = 0; i < tasks.size(); i++) {
                 if(tasks.get(i).getResourceAssignments().size() == 0){//说明还是在父任务层
